@@ -1,0 +1,11 @@
+numpy
+pandas
+opencv-python
+tensorflow
+keras
+streamlit
+
+logincredentials( 
+                Username = admin,
+                Password = Password
+                )
