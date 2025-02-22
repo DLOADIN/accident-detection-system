@@ -3,71 +3,78 @@ from admin import admin_page
 from streamlit.components.v1 import html
 
 def inject_custom_css():
-    # Custom CSS to match the New Relic-style sidebar
+    # Custom CSS to apply Inter font globally
     css = """
     <style>
-        /* Customize sidebar */
-        [data-testid="stSidebar"] {
-            background-color: #1A1A1A;
-            color: white;
-            height: 100vh;
-        }
+    @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 
-        /* Sidebar radio button styles */
-        [data-testid="stSidebar"] .stRadio div {
-            padding: 10px;
-            margin: 5px 0;
-            background-color: #1A1A1A;
-            border-radius: 8px;
-            transition: background-color 0.3s ease;
-        }
+    /* Apply Inter font globally */
+    html, body, [class*="css"]  {
+        font-family: 'Inter', sans-serif;
+    }
 
-        [data-testid="stSidebar"] .stRadio div:hover {
-            background-color: #333333;
-        }
+    /* Customize sidebar */
+    [data-testid="stSidebar"] {
+        background-color: #1A1A1A;
+        color: white;
+        height: 100vh;
+    }
 
-        /* Custom icons for each sidebar item */
-        [data-testid="stSidebar"] .stRadio div:nth-child(1)::before {
-            content: '🏠';
-            padding-right: 10px;
-            color: white;
-        }
+    /* Sidebar radio button styles */
+    [data-testid="stSidebar"] .stRadio div {
+        padding: 10px;
+        margin: 5px 0;
+        background-color: #1A1A1A;
+        border-radius: 8px;
+        transition: background-color 0.3s ease;
+    }
 
-        [data-testid="stSidebar"] .stRadio div:nth-child(2)::before {
-            content: 'ℹ️';
-            padding-right: 10px;
-            color: white;
-        }
+    [data-testid="stSidebar"] .stRadio div:hover {
+        background-color: #333333;
+    }
 
-        [data-testid="stSidebar"] .stRadio div:nth-child(3)::before {
-            content: '🖥️';
-            padding-right: 10px;
-            color: white;
-        }
+    /* Custom icons for each sidebar item */
+    [data-testid="stSidebar"] .stRadio div:nth-child(1)::before {
+        content: '🏠';
+        padding-right: 10px;
+        color: white;
+    }
 
-        [data-testid="stSidebar"] .stRadio div:nth-child(4)::before {
-            content: '🌍';
-            padding-right: 10px;
-            color: white;
-        }
+    [data-testid="stSidebar"] .stRadio div:nth-child(2)::before {
+        content: 'ℹ️';
+        padding-right: 10px;
+        color: white;
+    }
 
-        [data-testid="stSidebar"] .stRadio div:nth-child(5)::before {
-            content: '🔐';
-            padding-right: 10px;
-            color: white;
-        }
+    [data-testid="stSidebar"] .stRadio div:nth-child(3)::before {
+        content: '🖥️';
+        padding-right: 10px;
+        color: white;
+    }
 
-        [data-testid="stSidebar"] .stRadio div:nth-child(6)::before {
-            content: '🔑';
-            padding-right: 10px;
-            color: white;
-        }
+    [data-testid="stSidebar"] .stRadio div:nth-child(4)::before {
+        content: '🌍';
+        padding-right: 10px;
+        color: white;
+    }
 
-        /* Change selected option background */
-        [data-testid="stSidebar"] .stRadio div[data-checked="true"] {
-            background-color: #0072CE;
-            border-radius: 8px;
-        }
+    [data-testid="stSidebar"] .stRadio div:nth-child(5)::before {
+        content: '🔐';
+        padding-right: 10px;
+        color: white;
+    }
+
+    [data-testid="stSidebar"] .stRadio div:nth-child(6)::before {
+        content: '🔑';
+        padding-right: 10px;
+        color: white;
+    }
+
+    /* Change selected option background */
+    [data-testid="stSidebar"] .stRadio div[data-checked="true"] {
+        background-color: #0072CE;
+        border-radius: 8px;
+    }
     </style>
     """
     # Injecting CSS into Streamlit app
@@ -76,8 +83,6 @@ def inject_custom_css():
 inject_custom_css()  # Call the function to apply the custom CSS
 
 # Your usual Streamlit code follows here...
-
-
 
 # Function to display the Home Page
 def home():
@@ -211,6 +216,5 @@ def main():
         elif choice == "Signup":
             signup()
 
-# Run the application
 if __name__ == "__main__":
     main()
