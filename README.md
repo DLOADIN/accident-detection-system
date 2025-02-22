@@ -26,6 +26,14 @@
 
 An accident Detection System is designed to detect accidents via video or CCTV footage. Road accidents are a significant problem for the whole world. Many people lose their lives in road accidents. We can minimize this issue by using CCTV accident detection. This repository majorly explores how CCTV can detect these accidents with the help of Deep Learning.
 
+## 2.5 Requirements needed to installed may include:
+  - pip install : - numpy
+                  - pandas
+                  - opencv-python
+                  - tensorflow
+                  - keras
+                  - streamlit
+
 ## 3. Prerequisites
 
 - To use this project Python Version > 3.6 is recommended.
